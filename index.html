@@ -42,8 +42,7 @@
 //FIRST event listener
       // const main = document.getElementById('main');
       
-      // main.addEventListener('click', 
-      // () => {
+      // main.addEventListener('click', function(even) {
       //     alert('I was clicked!')
       //   });
         
@@ -51,7 +50,7 @@
 // document selector         
         const input = document.querySelector('input')
         
-        input.addEventListener('keydown', event => console.log(e.which))
+        input.addEventListener('keydown', e => console.log(e.which))
         
         // const input = document.querySelector('input')
  
@@ -66,7 +65,7 @@
     let divs = document.querySelectorAll('div')
  
     function bubble(e) {
-  e.stopPropagation()
+    e.stopPropagation()
       console.log(this.firstChild.nodeValue.trim() + ' bubbled')
     }
      
