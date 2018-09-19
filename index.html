@@ -49,9 +49,9 @@
         
         
 // document selector         
-        // const input = document.querySelector('input')
+        const input = document.querySelector('input')
         
-        // input.addEventListener('keydown', event => console.log(event.which))
+        input.addEventListener('keydown', event => console.log(e.which))
         
         // const input = document.querySelector('input')
  
@@ -66,10 +66,10 @@
     let divs = document.querySelectorAll('div')
  
     function bubble(e) {
-    
-    console.log(this.firstChild.nodeValue.trim() + ' bubbled')
-}
- 
+  e.stopPropagation()
+      console.log(this.firstChild.nodeValue.trim() + ' bubbled')
+    }
+     
     for (const aDiv of divs) {
       aDiv.addEventListener('click', bubble);
     }
